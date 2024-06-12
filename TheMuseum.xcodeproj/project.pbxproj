@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15382BA72C06D0010063AAFD /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 15382BA62C06D0010063AAFD /* RealityKitContent */; };
+		15382BA92C06D0010063AAFD /* TheMuseumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15382BA82C06D0010063AAFD /* TheMuseumApp.swift */; };
+		15382BAB2C06D0010063AAFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15382BAA2C06D0010063AAFD /* ContentView.swift */; };
+		15382BAD2C06D0010063AAFD /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15382BAC2C06D0010063AAFD /* ImmersiveView.swift */; };
+		15382BAF2C06D0010063AAFD /* ImageBasedLighting.skybox in Resources */ = {isa = PBXBuildFile; fileRef = 15382BAE2C06D0010063AAFD /* ImageBasedLighting.skybox */; };
+		15382BB12C06D0020063AAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15382BB02C06D0020063AAFD /* Assets.xcassets */; };
+		15382BB42C06D0020063AAFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15382BB32C06D0020063AAFD /* Preview Assets.xcassets */; };
+		15382BBC2C0A90810063AAFD /* SkyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15382BBB2C0A90810063AAFD /* SkyView.swift */; };
+		158770CB2C17B3D70089BDA7 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158770CA2C17B3D70089BDA7 /* DescriptionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15382BA12C06D0010063AAFD /* TheMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15382BA52C06D0010063AAFD /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		15382BA82C06D0010063AAFD /* TheMuseumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMuseumApp.swift; sourceTree = "<group>"; };
+		15382BAA2C06D0010063AAFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		15382BAC2C06D0010063AAFD /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		15382BAE2C06D0010063AAFD /* ImageBasedLighting.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = ImageBasedLighting.skybox; sourceTree = "<group>"; };
+		15382BB02C06D0020063AAFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15382BB32C06D0020063AAFD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		15382BB52C06D0020063AAFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15382BBB2C0A90810063AAFD /* SkyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyView.swift; sourceTree = "<group>"; };
+		158770CA2C17B3D70089BDA7 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		15FA27502C19458E00FE2006 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15382B9E2C06D0010063AAFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15382BA72C06D0010063AAFD /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15382B982C06D0010063AAFD = {
+			isa = PBXGroup;
+			children = (
+				15FA27502C19458E00FE2006 /* README.md */,
+				15382BA32C06D0010063AAFD /* TheMuseum */,
+				15382BA42C06D0010063AAFD /* Packages */,
+				15382BA22C06D0010063AAFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15382BA22C06D0010063AAFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15382BA12C06D0010063AAFD /* TheMuseum.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15382BA32C06D0010063AAFD /* TheMuseum */ = {
+			isa = PBXGroup;
+			children = (
+				15382BA82C06D0010063AAFD /* TheMuseumApp.swift */,
+				15382BAA2C06D0010063AAFD /* ContentView.swift */,
+				15382BAC2C06D0010063AAFD /* ImmersiveView.swift */,
+				158770CA2C17B3D70089BDA7 /* DescriptionView.swift */,
+				15382BAE2C06D0010063AAFD /* ImageBasedLighting.skybox */,
+				15382BB02C06D0020063AAFD /* Assets.xcassets */,
+				15382BB52C06D0020063AAFD /* Info.plist */,
+				15382BB22C06D0020063AAFD /* Preview Content */,
+				15382BBB2C0A90810063AAFD /* SkyView.swift */,
+			);
+			path = TheMuseum;
+			sourceTree = "<group>";
+		};
+		15382BA42C06D0010063AAFD /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				15382BA52C06D0010063AAFD /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		15382BB22C06D0020063AAFD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				15382BB32C06D0020063AAFD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15382BA02C06D0010063AAFD /* TheMuseum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15382BB82C06D0020063AAFD /* Build configuration list for PBXNativeTarget "TheMuseum" */;
+			buildPhases = (
+				15382B9D2C06D0010063AAFD /* Sources */,
+				15382B9E2C06D0010063AAFD /* Frameworks */,
+				15382B9F2C06D0010063AAFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheMuseum;
+			packageProductDependencies = (
+				15382BA62C06D0010063AAFD /* RealityKitContent */,
+			);
+			productName = TheMuseum;
+			productReference = 15382BA12C06D0010063AAFD /* TheMuseum.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15382B992C06D0010063AAFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					15382BA02C06D0010063AAFD = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 15382B9C2C06D0010063AAFD /* Build configuration list for PBXProject "TheMuseum" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15382B982C06D0010063AAFD;
+			productRefGroup = 15382BA22C06D0010063AAFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15382BA02C06D0010063AAFD /* TheMuseum */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15382B9F2C06D0010063AAFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15382BB12C06D0020063AAFD /* Assets.xcassets in Resources */,
+				15382BB42C06D0020063AAFD /* Preview Assets.xcassets in Resources */,
+				15382BAF2C06D0010063AAFD /* ImageBasedLighting.skybox in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15382B9D2C06D0010063AAFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15382BAB2C06D0010063AAFD /* ContentView.swift in Sources */,
+				15382BA92C06D0010063AAFD /* TheMuseumApp.swift in Sources */,
+				15382BBC2C0A90810063AAFD /* SkyView.swift in Sources */,
+				15382BAD2C06D0010063AAFD /* ImmersiveView.swift in Sources */,
+				158770CB2C17B3D70089BDA7 /* DescriptionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		15382BB62C06D0020063AAFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.2;
+			};
+			name = Debug;
+		};
+		15382BB72C06D0020063AAFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.2;
+			};
+			name = Release;
+		};
+		15382BB92C06D0020063AAFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TheMuseum/Preview Content\"";
+				DEVELOPMENT_TEAM = AGAQLEUYT9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grandconsult.TheMuseum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		15382BBA2C06D0020063AAFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TheMuseum/Preview Content\"";
+				DEVELOPMENT_TEAM = AGAQLEUYT9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grandconsult.TheMuseum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15382B9C2C06D0010063AAFD /* Build configuration list for PBXProject "TheMuseum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15382BB62C06D0020063AAFD /* Debug */,
+				15382BB72C06D0020063AAFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15382BB82C06D0020063AAFD /* Build configuration list for PBXNativeTarget "TheMuseum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15382BB92C06D0020063AAFD /* Debug */,
+				15382BBA2C06D0020063AAFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15382BA62C06D0010063AAFD /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 15382B992C06D0010063AAFD /* Project object */;
+}

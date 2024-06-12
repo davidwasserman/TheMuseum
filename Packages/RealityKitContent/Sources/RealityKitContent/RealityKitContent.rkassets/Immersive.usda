@@ -1,0 +1,350 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["GridMaterial", "MariaTheresia", "StAnna", "StAnnaCube", "MariaTheresiaCube", "QueenJudith", "QueenJudithCube"]
+    def "GridMaterial" (
+        active = true
+        references = @Materials/GridMaterial.usda@
+    )
+    {
+        reorder nameChildren = ["Maria_Theresia", "GridMaterial"]
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "MariaTheresia" (
+        active = true
+        references = @Maria_Theresia.usdz@
+    )
+    {
+        reorder nameChildren = ["Materials", "Meshes", "InputTarget", "CharacterController"]
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.004, 0.004, 0.004)
+        float3 xformOp:translate = (0.5, 0.5, -3)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Meshes"
+        {
+            over "Sketchfab_model"
+            {
+                over "MariaTheresia_C_obj_cleaner_materialmerger_gles"
+                {
+                    over "Object_2"
+                    {
+                        over "Object_0"
+                        {
+                        }
+                    }
+
+                    over "Object_3"
+                    {
+                        over "Object_1"
+                        {
+                        }
+                    }
+
+                    over "Object_4"
+                    {
+                        over "Object_2"
+                        {
+                        }
+                    }
+
+                    over "Object_5"
+                    {
+                        over "Object_3"
+                        {
+                        }
+                    }
+
+                    over "Object_6"
+                    {
+                        over "Object_4"
+                        {
+                        }
+                    }
+
+                    over "Object_7"
+                    {
+                        over "Object_5"
+                        {
+                        }
+                    }
+
+                    over "Object_8"
+                    {
+                        over "Object_6"
+                        {
+                        }
+                    }
+
+                    over "Object_9"
+                    {
+                        over "Object_7"
+                        {
+                        }
+                    }
+
+                    over "Object_10"
+                    {
+                        over "Object_8"
+                        {
+                        }
+                    }
+
+                    over "Object_11"
+                    {
+                        over "Object_9"
+                        {
+                        }
+                    }
+                }
+            }
+        }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (161.21234, 287.05975, 94.94806)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (1.4708595, 143.41675, -2.8430328)
+                }
+            }
+        }
+
+        def RealityKitComponent "GroundingShadow"
+        {
+            bool enableIBLShadow = 1
+            bool enableMeshShadow = 1
+            uniform token info:id = "RealityKit.GroundingShadow"
+        }
+    }
+
+    def "StAnna" (
+        active = true
+        references = @Sculpture_showing_St.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.004, 0.004, 0.004)
+        float3 xformOp:translate = (-1.5, 1.1, -3)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (123.45993, 300, 91.953514)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (6.448189, 0.00036621094, 0.000034332275)
+                }
+            }
+        }
+
+        def RealityKitComponent "GroundingShadow"
+        {
+            bool enableIBLShadow = 1
+            bool enableMeshShadow = 1
+            uniform token info:id = "RealityKit.GroundingShadow"
+        }
+    }
+
+    def Cube "StAnnaCube" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/StAnnaCube/DefaultMaterial>
+        double size = 0.5
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (2, 1, 2)
+        float3 xformOp:translate = (-1.5, 0.25, -3)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "DefaultMaterial"
+        {
+            token outputs:mtlx:surface
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = </Root/StAnnaCube/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.18242887, 0.41346705, 1) (
+                    colorSpace = "srgb_texture"
+                )
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+        }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+
+        def RealityKitComponent "MotionState"
+        {
+            uniform token info:id = "RealityKit.MotionState"
+        }
+
+        def RealityKitComponent "RigidBody"
+        {
+            uniform token info:id = "RealityKit.RigidBody"
+
+            def RealityKitStruct "massFrame"
+            {
+                def RealityKitStruct "m_pose"
+                {
+                }
+            }
+
+            def RealityKitStruct "material"
+            {
+            }
+        }
+    }
+
+    def Cube "QueenJudithCube" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/QueenJudithCube/DefaultMaterial>
+        double size = 0.5
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (2, 1, 2)
+        float3 xformOp:translate = (2.5, 0.25, -3)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "DefaultMaterial"
+        {
+            token outputs:mtlx:surface
+            token outputs:realitykit:vertex
+            prepend token outputs:surface.connect = </Root/QueenJudithCube/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.18242887, 0.41346705, 1) (
+                    colorSpace = "srgb_texture"
+                )
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+        }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+    }
+
+    def Cube "MariaTheresiaCube" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/MariaTheresiaCube/DefaultMaterial>
+        double size = 0.5
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (2, 1, 2)
+        float3 xformOp:translate = (0.5, 0.25, -3)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "DefaultMaterial"
+        {
+            token outputs:mtlx:surface
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = </Root/MariaTheresiaCube/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.18242887, 0.41346705, 1) (
+                    colorSpace = "srgb_texture"
+                )
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+        }
+    }
+
+    def "QueenJudith" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 4.363323, 0)
+        }
+        references = @Queen_Judith.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.5735765, 0, -0.81915194, 0)
+        float3 xformOp:scale = (0.007, 0.007, 0.007)
+        float3 xformOp:translate = (2.5, 1.2, -3)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (50.171, 199.99998, 90.427)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0, 0.000076293945, 0.000017166138)
+                }
+            }
+        }
+
+        def RealityKitComponent "Accessibility"
+        {
+            uniform token info:id = "RealityKit.Accessibility"
+            bool isEnabled = 1
+            string label = "Queen Judith"
+        }
+    }
+}
+
