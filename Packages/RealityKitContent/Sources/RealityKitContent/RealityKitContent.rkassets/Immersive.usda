@@ -186,7 +186,10 @@ def Xform "Root"
         prepend apiSchemas = ["MaterialBindingAPI"]
     )
     {
-        rel material:binding = </Root/StAnnaCube/DefaultMaterial>
+        reorder nameChildren = ["Black_Silicone_Rubber", "Black_ABS_Plastic", "DefaultMaterial", "InputTarget", "MotionState", "RigidBody"]
+        rel material:binding = </Root/StAnnaCube/Black_Silicone_Rubber> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
         double size = 0.5
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (2, 1, 2)
@@ -202,9 +205,10 @@ def Xform "Root"
             def Shader "DefaultSurfaceShader"
             {
                 uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (0.18242887, 0.41346705, 1) (
+                color3f inputs:diffuseColor = (0.12984204, 0.12984613, 0.12984395) (
                     colorSpace = "srgb_texture"
                 )
+                float inputs:metallic = 1
                 float inputs:roughness = 0.75
                 token outputs:surface
             }
@@ -235,6 +239,17 @@ def Xform "Root"
             {
             }
         }
+
+        def "Black_Silicone_Rubber" (
+            active = true
+            references = @BlackSiliconeRubber.usdz@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
     }
 
     def Cube "QueenJudithCube" (
@@ -242,7 +257,10 @@ def Xform "Root"
         prepend apiSchemas = ["MaterialBindingAPI"]
     )
     {
-        rel material:binding = </Root/QueenJudithCube/DefaultMaterial>
+        reorder nameChildren = ["BlackSiliconeRubber", "DefaultMaterial", "InputTarget"]
+        rel material:binding = </Root/QueenJudithCube/BlackSiliconeRubber> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
         double size = 0.5
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (2, 1, 2)
@@ -258,9 +276,10 @@ def Xform "Root"
             def Shader "DefaultSurfaceShader"
             {
                 uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (0.18242887, 0.41346705, 1) (
+                color3f inputs:diffuseColor = (0.12984204, 0.12984613, 0.12984395) (
                     colorSpace = "srgb_texture"
                 )
+                float inputs:metallic = 1
                 float inputs:roughness = 0.75
                 token outputs:surface
             }
@@ -270,6 +289,92 @@ def Xform "Root"
         {
             uniform token info:id = "RealityKit.InputTarget"
         }
+
+        def "BlackSiliconeRubber" (
+            active = true
+            prepend references = @BlackSiliconeRubber.usdz@
+        )
+        {
+            color3f inputs:Basecolor_Tint (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-45.51249, 49.172512)
+                        float2 sizeInSubgraph = (160.5, 53)
+                        int stackingOrderInSubgraph = 2269
+                    }
+                }
+            )
+            float2 inputs:UV_Scale (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-725.2588, 351.55255)
+                        float2 sizeInSubgraph = (138.5, 53)
+                        int stackingOrderInSubgraph = 2272
+                    }
+                }
+            )
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            over "Mix"
+            {
+                float2 ui:nodegraph:node:size = (109, 145)
+            }
+
+            over "Swizzle_1"
+            {
+                float2 ui:nodegraph:node:size = (145.5, 53)
+            }
+
+            over "Swizzle"
+            {
+                float2 ui:nodegraph:node:size = (133.5, 40)
+            }
+
+            over "Multiply_1"
+            {
+                float2 ui:nodegraph:node:size = (60, 36)
+            }
+
+            over "Dot"
+            {
+                float2 ui:nodegraph:node:size = (44, 18)
+            }
+
+            over "multiply"
+            {
+                float2 ui:nodegraph:node:size = (60, 36)
+            }
+
+            over "add"
+            {
+                float2 ui:nodegraph:node:size = (61.5, 36.5)
+            }
+
+            over "PreviewSurface"
+            {
+                float2 ui:nodegraph:node:size = (148.5, 199)
+            }
+
+            over "Roughness"
+            {
+                float2 ui:nodegraph:node:size = (158.5, 235)
+            }
+
+            over "Metallic"
+            {
+                float2 ui:nodegraph:node:size = (158.5, 235)
+            }
+
+            over "Normal"
+            {
+                float2 ui:nodegraph:node:size = (158.5, 235)
+            }
+
+            over "BaseColor"
+            {
+                float2 ui:nodegraph:node:size = (158.5, 235)
+            }
+        }
     }
 
     def Cube "MariaTheresiaCube" (
@@ -277,7 +382,10 @@ def Xform "Root"
         prepend apiSchemas = ["MaterialBindingAPI"]
     )
     {
-        rel material:binding = </Root/MariaTheresiaCube/DefaultMaterial>
+        reorder nameChildren = ["BlackSiliconeRubber", "DefaultMaterial"]
+        rel material:binding = </Root/MariaTheresiaCube/BlackSiliconeRubber> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
         double size = 0.5
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (2, 1, 2)
@@ -286,6 +394,7 @@ def Xform "Root"
 
         def Material "DefaultMaterial"
         {
+            reorder nameChildren = ["BlackSiliconeRubber", "DefaultSurfaceShader"]
             token outputs:mtlx:surface
             token outputs:realitykit:vertex
             token outputs:surface.connect = </Root/MariaTheresiaCube/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
@@ -293,11 +402,98 @@ def Xform "Root"
             def Shader "DefaultSurfaceShader"
             {
                 uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (0.18242887, 0.41346705, 1) (
+                color3f inputs:diffuseColor = (0.12984204, 0.12984613, 0.12984395) (
                     colorSpace = "srgb_texture"
                 )
+                float inputs:metallic = 1
                 float inputs:roughness = 0.75
                 token outputs:surface
+            }
+        }
+
+        def "BlackSiliconeRubber" (
+            active = true
+            references = @BlackSiliconeRubber.usdz@
+        )
+        {
+            color3f inputs:Basecolor_Tint (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-45.51249, 49.172512)
+                        float2 sizeInSubgraph = (160.5, 53)
+                        int stackingOrderInSubgraph = 2269
+                    }
+                }
+            )
+            float2 inputs:UV_Scale (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-725.2588, 351.55255)
+                        float2 sizeInSubgraph = (138.5, 53)
+                        int stackingOrderInSubgraph = 2272
+                    }
+                }
+            )
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+            over "Mix"
+            {
+                float2 ui:nodegraph:node:size = (109, 145)
+            }
+
+            over "Swizzle_1"
+            {
+                float2 ui:nodegraph:node:size = (145.5, 53)
+            }
+
+            over "Swizzle"
+            {
+                float2 ui:nodegraph:node:size = (133.5, 40)
+            }
+
+            over "Multiply_1"
+            {
+                float2 ui:nodegraph:node:size = (60, 36)
+            }
+
+            over "Dot"
+            {
+                float2 ui:nodegraph:node:size = (44, 18)
+            }
+
+            over "multiply"
+            {
+                float2 ui:nodegraph:node:size = (60, 36)
+            }
+
+            over "add"
+            {
+                float2 ui:nodegraph:node:size = (61.5, 36.5)
+            }
+
+            over "PreviewSurface"
+            {
+                float2 ui:nodegraph:node:size = (148.5, 199)
+            }
+
+            over "Roughness"
+            {
+                float2 ui:nodegraph:node:size = (158.5, 235)
+            }
+
+            over "Metallic"
+            {
+                float2 ui:nodegraph:node:size = (158.5, 235)
+            }
+
+            over "Normal"
+            {
+                float2 ui:nodegraph:node:size = (158.5, 235)
+            }
+
+            over "BaseColor"
+            {
+                float2 ui:nodegraph:node:size = (158.5, 235)
             }
         }
     }
