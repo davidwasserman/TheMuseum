@@ -96,7 +96,8 @@ struct ImmersiveView: View {
         VStack(spacing: 100) {
           Text("Maria Theresia")
             .font(.extraLargeTitle)
-            .padding()
+            .padding(.vertical, 40)
+            .padding(.horizontal, 60)
             .glassBackgroundEffect()
           Button(action: {
             print("Button clicked")
@@ -104,7 +105,8 @@ struct ImmersiveView: View {
           }, label: {
             Text("Learn more")
               .font(.extraLargeTitle)
-              .padding()
+              .padding(.vertical, 40)
+              .padding(.horizontal, 60)
               .glassBackgroundEffect()
           })
         }
@@ -113,7 +115,8 @@ struct ImmersiveView: View {
         VStack(spacing: 100) {
           Text("St. Anna")
             .font(.extraLargeTitle)
-            .padding()
+            .padding(.vertical, 40)
+            .padding(.horizontal, 60)
             .glassBackgroundEffect()
           Button(action: {
             print("Button clicked")
@@ -121,7 +124,8 @@ struct ImmersiveView: View {
           }, label: {
             Text("Learn more")
               .font(.extraLargeTitle)
-              .padding()
+              .padding(.vertical, 40)
+              .padding(.horizontal, 60)
               .glassBackgroundEffect()
           })
         }
@@ -130,7 +134,8 @@ struct ImmersiveView: View {
         VStack(spacing: 100) {
           Text("Queen Judith")
             .font(.extraLargeTitle)
-            .padding()
+            .padding(.vertical, 40)
+            .padding(.horizontal, 60)
             .glassBackgroundEffect()
           Button(action: {
             print("Button clicked")
@@ -138,7 +143,8 @@ struct ImmersiveView: View {
           }, label: {
             Text("Learn more")
               .font(.extraLargeTitle)
-              .padding()
+              .padding(.vertical, 40)
+              .padding(.horizontal, 60)
               .glassBackgroundEffect()
           })
         }

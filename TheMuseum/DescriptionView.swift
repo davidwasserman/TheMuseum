@@ -50,8 +50,8 @@ struct DescriptionView: View {
       } label: {
         Text("Dismiss")
           .font(.title)
-          .frame(width: 360)
-          .padding(24)
+          .padding(.vertical, 20)
+          .padding(.horizontal, 80)
           .glassBackgroundEffect()
       }
     }
