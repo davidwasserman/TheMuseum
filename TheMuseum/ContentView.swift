@@ -29,6 +29,7 @@ struct ContentView: View {
 
       Text("Welcome to the Museum of Historical Artifacts.  This is a special museum that is currently honoring great women of history.  In this virtual museum, feel free to pick up the artifacts and examine up close.  When you're done, you can simply release them and they'll magically bounce back to their original positions.")
         .font(.title)
+        .padding(.horizontal, 80)
 
       // MARK: - Toggle to enter the museum in an immersive space and dismiss this view
       Toggle("Enter the museum", isOn: $showImmersiveSpace)

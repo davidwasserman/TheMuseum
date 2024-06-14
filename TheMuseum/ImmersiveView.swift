@@ -94,58 +94,34 @@ struct ImmersiveView: View {
     } attachments: {  // Attachemnts added for labels on artifacts.
       Attachment(id: "MariaTheresiaCubeAttachment") {
         VStack(spacing: 100) {
-          Text("Maria Theresia")
-            .font(.extraLargeTitle)
-            .padding(.vertical, 40)
-            .padding(.horizontal, 60)
-            .glassBackgroundEffect()
+          TitleTextView(title: "Maria Theresia")
           Button(action: {
             print("Button clicked")
             self.openWindow(id: "DescriptionView", value: "MariaTheresia")
           }, label: {
-            Text("Learn more")
-              .font(.extraLargeTitle)
-              .padding(.vertical, 40)
-              .padding(.horizontal, 60)
-              .glassBackgroundEffect()
+            LearnMoreButtonView()
           })
         }
       }
       Attachment(id: "StAnnaCubeAttachment") {
         VStack(spacing: 100) {
-          Text("St. Anna")
-            .font(.extraLargeTitle)
-            .padding(.vertical, 40)
-            .padding(.horizontal, 60)
-            .glassBackgroundEffect()
+          TitleTextView(title: "St. Anna")
           Button(action: {
             print("Button clicked")
             self.openWindow(id: "DescriptionView", value: "StAnna")
           }, label: {
-            Text("Learn more")
-              .font(.extraLargeTitle)
-              .padding(.vertical, 40)
-              .padding(.horizontal, 60)
-              .glassBackgroundEffect()
+            LearnMoreButtonView()
           })
         }
       }
       Attachment(id: "QueenJudithCubeAttachment") {
         VStack(spacing: 100) {
-          Text("Queen Judith")
-            .font(.extraLargeTitle)
-            .padding(.vertical, 40)
-            .padding(.horizontal, 60)
-            .glassBackgroundEffect()
+          TitleTextView(title: "Queen Judith")
           Button(action: {
             print("Button clicked")
             self.openWindow(id: "DescriptionView", value: "QueenJudith")
           }, label: {
-            Text("Learn more")
-              .font(.extraLargeTitle)
-              .padding(.vertical, 40)
-              .padding(.horizontal, 60)
-              .glassBackgroundEffect()
+            LearnMoreButtonView()
           })
         }
       }
