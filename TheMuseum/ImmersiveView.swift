@@ -96,7 +96,6 @@ struct ImmersiveView: View {
         VStack(spacing: 100) {
           TitleTextView(title: "Maria Theresia")
           Button(action: {
-            print("Button clicked")
             self.openWindow(id: "DescriptionView", value: "MariaTheresia")
           }, label: {
             LearnMoreButtonView()
@@ -107,7 +106,6 @@ struct ImmersiveView: View {
         VStack(spacing: 100) {
           TitleTextView(title: "St. Anna")
           Button(action: {
-            print("Button clicked")
             self.openWindow(id: "DescriptionView", value: "StAnna")
           }, label: {
             LearnMoreButtonView()
@@ -118,7 +116,6 @@ struct ImmersiveView: View {
         VStack(spacing: 100) {
           TitleTextView(title: "Queen Judith")
           Button(action: {
-            print("Button clicked")
             self.openWindow(id: "DescriptionView", value: "QueenJudith")
           }, label: {
             LearnMoreButtonView()

@@ -138,6 +138,14 @@ def Xform "Root"
             bool enableMeshShadow = 1
             uniform token info:id = "RealityKit.GroundingShadow"
         }
+
+        def RealityKitComponent "Accessibility"
+        {
+            uniform token info:id = "RealityKit.Accessibility"
+            bool isEnabled = 1
+            string label = "Maria Theresia"
+            string value = "Maria Theresia"
+        }
     }
 
     def "StAnna" (
@@ -179,6 +187,14 @@ def Xform "Root"
             bool enableMeshShadow = 1
             uniform token info:id = "RealityKit.GroundingShadow"
         }
+
+        def RealityKitComponent "Accessibility"
+        {
+            uniform token info:id = "RealityKit.Accessibility"
+            bool isEnabled = 1
+            string label = "St. Anna"
+            string value = "St. Anna"
+        }
     }
 
     def Cube "StAnnaCube" (
@@ -211,32 +227,6 @@ def Xform "Root"
                 float inputs:metallic = 1
                 float inputs:roughness = 0.75
                 token outputs:surface
-            }
-        }
-
-        def RealityKitComponent "InputTarget"
-        {
-            uniform token info:id = "RealityKit.InputTarget"
-        }
-
-        def RealityKitComponent "MotionState"
-        {
-            uniform token info:id = "RealityKit.MotionState"
-        }
-
-        def RealityKitComponent "RigidBody"
-        {
-            uniform token info:id = "RealityKit.RigidBody"
-
-            def RealityKitStruct "massFrame"
-            {
-                def RealityKitStruct "m_pose"
-                {
-                }
-            }
-
-            def RealityKitStruct "material"
-            {
             }
         }
 
@@ -283,11 +273,6 @@ def Xform "Root"
                 float inputs:roughness = 0.75
                 token outputs:surface
             }
-        }
-
-        def RealityKitComponent "InputTarget"
-        {
-            uniform token info:id = "RealityKit.InputTarget"
         }
 
         def "BlackSiliconeRubber" (
@@ -540,6 +525,14 @@ def Xform "Root"
             uniform token info:id = "RealityKit.Accessibility"
             bool isEnabled = 1
             string label = "Queen Judith"
+            string value = "Queen Judith"
+        }
+
+        def RealityKitComponent "GroundingShadow"
+        {
+            bool enableIBLShadow = 1
+            bool enableMeshShadow = 1
+            uniform token info:id = "RealityKit.GroundingShadow"
         }
     }
 }
