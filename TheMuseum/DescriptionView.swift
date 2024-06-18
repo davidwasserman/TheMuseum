@@ -42,15 +42,16 @@ struct DescriptionView: View {
       }
 
       // MARK: - Dismiss DescriptionView
-      Button {
+      Button (action: {
         dismissWindow(id: "DescriptionView")
-      } label: {
+      }, label: {
         Text("Dismiss")
           .font(.title)
-          .padding(.vertical, 20)
-          .padding(.horizontal, 80)
-          .glassBackgroundEffect()
-      }
+          .padding(30)
+      })
+      .tint(.black)
+      .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+      .buttonBorderShape(.roundedRectangle(radius: 20))
     }
     .padding()
   }
