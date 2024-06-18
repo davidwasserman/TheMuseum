@@ -13,7 +13,6 @@ struct LearnMoreButtonView: View {
       .font(.extraLargeTitle)
       .padding(.vertical, 40)
       .padding(.horizontal, 60)
-      .glassBackgroundEffect()
   }
 }
 

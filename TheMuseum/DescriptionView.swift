@@ -50,7 +50,6 @@ struct DescriptionView: View {
           .padding(30)
       })
       .tint(.black)
-      .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
       .buttonBorderShape(.roundedRectangle(radius: 20))
     }
     .padding()
